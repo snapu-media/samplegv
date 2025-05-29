@@ -3,7 +3,9 @@
 import { useState, useEffect } from 'react';
 
 import { TextReveal } from "../ui/TextReaveal";
-import HeroSection from "./HeroSection"
+import HeroSection from "./HeroSection";
+import ScrollingTextPage from './ScrollingText';
+import  HomePage2 from "./HomePage2";
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,11 +22,14 @@ export default function HomePage() {
   return (
     <div className="min-h-screen ">
       <HeroSection />
+      <ScrollingTextPage/>
 
       <div className=' bg-gradient-to-t from-green-50 to-emerald-100'>
           <TextReveal>"Bringing Tradition to Your Table, One Pickle at a Time."</TextReveal>
 
       </div>
+
+      < HomePage2/>
     
 
 
