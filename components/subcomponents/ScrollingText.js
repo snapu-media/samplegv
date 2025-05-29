@@ -28,7 +28,7 @@ export default function PickleBusiness() {
   }, []);
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-green-100 to-orange-50">
+    <div className="relative overflow-hidden bg-gradient-to-br from-green-100 to-orange-50">
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(15)].map((_, i) => (

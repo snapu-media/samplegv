@@ -125,9 +125,9 @@ export default function PickleBusinessHome() {
             <div className="w-24 h-1 bg-green-500 mx-auto mt-6 rounded-full"></div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 opacity-0 translate-y-10 animate-fadeInUp" ref={el => textRefs.current[2] = el}>
-              <div className="text-green-500 mb-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 opacity-0 translate-y-10 animate-fadeInUp" ref={el => textRefs.current[2] = el}>
+              <div className="text-green-500 mb-2">
                 <div className="bg-green-100 w-8 h-8 md:w-16 md:h-16 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -135,11 +135,11 @@ export default function PickleBusinessHome() {
                 </div>
               </div>
               <h3 className="text-md md:text-xl font-bold text-green-900 mb-3">Premium Quality</h3>
-              <p className="text-gray-700">Made with the finest ingredients and traditional recipes for authentic taste.</p>
+              <p className="text-sm md:text-lg text-gray-700">Made with the finest ingredients and traditional recipes for authentic taste.</p>
             </div>
             
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 opacity-0 translate-y-10 animate-fadeInUp" ref={el => textRefs.current[3] = el}>
-              <div className="text-green-500 mb-4">
+            <div className="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 opacity-0 translate-y-10 animate-fadeInUp" ref={el => textRefs.current[3] = el}>
+              <div className="text-green-500 mb-2">
                 <div className="bg-green-100 w-8 h-8 md:w-16 md:h-16 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -150,8 +150,8 @@ export default function PickleBusinessHome() {
               <p className="text-sm md:text-lg text-gray-700">We deliver across India and worldwide with secure packaging.</p>
             </div>
             
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 opacity-0 translate-y-10 animate-fadeInUp" ref={el => textRefs.current[4] = el}>
-              <div className="text-green-500 mb-4">
+            <div className="bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-2 opacity-0 translate-y-10 animate-fadeInUp" ref={el => textRefs.current[4] = el}>
+              <div className="text-green-500 mb-2">
                 <div className="bg-green-100 w-8 h-8 md:w-16 md:h-16 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -265,47 +265,53 @@ export default function PickleBusinessHome() {
   </div>
 </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4 bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-16 opacity-0 translate-y-10 animate-fadeInUp" ref={el => textRefs.current[14] = el}>
-            <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-4">What Our Customers Say</h2>
-            <p className="text-lg text-gray-700">Real experiences from pickle lovers</p>
-            <div className="w-24 h-1 bg-green-500 mx-auto mt-6 rounded-full"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index} 
-                className="bg-green-50 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 opacity-0 translate-y-10 animate-fadeInUp"
-                ref={el => textRefs.current[15 + index] = el}
+    {/* Testimonials Section */}
+<section id="testimonials" className="py-16 sm:py-20 px-4 bg-white">
+  <div className="container mx-auto">
+    <div className="text-center mb-12 sm:mb-16 opacity-0 translate-y-10 animate-fadeInUp" ref={el => textRefs.current[14] = el}>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-900 mb-3 sm:mb-4">
+        What Our Customers Say
+      </h2>
+      <p className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
+        Real experiences from pickle lovers
+      </p>
+      <div className="w-20 sm:w-24 h-0.5 sm:h-1 bg-green-500 mx-auto mt-4 sm:mt-6 rounded-full"></div>
+    </div>
+    
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+      {testimonials.map((testimonial, index) => (
+        <div 
+          key={index} 
+          className="bg-green-50 p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-sm sm:shadow-md hover:shadow-lg transition duration-300 opacity-0 translate-y-10 animate-fadeInUp"
+          ref={el => textRefs.current[15 + index] = el}
+        >
+          <div className="flex items-center mb-3 sm:mb-4">
+            {[...Array(5)].map((_, i) => (
+              <svg 
+                key={i} 
+                className={`w-4 h-4 sm:w-5 sm:h-5 ${i < testimonial.rating ? 'text-green-500' : 'text-gray-300'}`} 
+                fill="currentColor" 
+                viewBox="0 0 20 20"
               >
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg 
-                      key={i} 
-                      className={`w-5 h-5 ${i < testimonial.rating ? 'text-green-500' : 'text-gray-300'}`} 
-                      fill="currentColor" 
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-700 italic mb-6">"{testimonial.comment}"</p>
-                <div className="flex items-center">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-12 h-12 mr-4" />
-                  <div>
-                    <h4 className="font-bold text-green-900">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm">{testimonial.location}</p>
-                  </div>
-                </div>
-              </div>
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
             ))}
           </div>
+          <p className="text-gray-700 italic mb-4 sm:mb-6 text-xs sm:text-sm">
+            "{testimonial.comment}"
+          </p>
+          <div className="flex items-center">
+            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-8 h-8 sm:w-10 sm:h-10 mr-2 sm:mr-3"></div>
+            <div>
+              <h4 className="font-bold text-green-900 text-sm sm:text-base">{testimonial.name}</h4>
+              <p className="text-gray-600 text-xs sm:text-sm">{testimonial.location}</p>
+            </div>
+          </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
      
 
