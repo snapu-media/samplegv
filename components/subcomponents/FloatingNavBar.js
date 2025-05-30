@@ -28,7 +28,7 @@ export default function FloatingNav() {
                 About
               </Link>
               <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors hover:bg-white/10 px-3 py-1 rounded-lg">
-                Services
+                Pickles
               </Link>
               <Link href="/contact" className="text-gray-700 hover:text-gray-900 transition-colors hover:bg-white/10 px-3 py-1 rounded-lg">
                 Contact
@@ -88,7 +88,7 @@ export default function FloatingNav() {
               href="/services"
               className="block px-3 py-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-white/20 transition-colors"
             >
-              Services
+              Pickles
             </Link>
             <Link
               href="/contact"

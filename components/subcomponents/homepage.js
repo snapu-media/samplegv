@@ -6,6 +6,10 @@ import { TextReveal } from "../ui/TextReaveal";
 import HeroSection from "./HeroSection";
 import ScrollingTextPage from './ScrollingText';
 import  HomePage2 from "./HomePage2";
+import PickleCategories from "./Categories";
+import Footer from "./Footer";
+import  WhyChoose from "./WhyChoose";
+import Testimonials from "./Testmonials"
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,8 +32,13 @@ export default function HomePage() {
           <TextReveal>"Bringing Tradition to Your Table, One Pickle at a Time."</TextReveal>
 
       </div>
+      <PickleCategories/>
 
       < HomePage2/>
+      <WhyChoose/>
+      
+      <Testimonials/>
+      <Footer/>
     
 
 
