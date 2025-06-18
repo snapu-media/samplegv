@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function PickleCategories() {
   const categories = [
     {
-      id: 'Veg-Pickles',
+      id: 'veg',
       title: 'Veg Pickles',
       description: 'Traditional vegetable-based pickles with authentic flavors',
       image: '/pickles/Mango1.jpg',
