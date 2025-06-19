@@ -2,6 +2,7 @@
 'use client';
 
 import {useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 
 export default function PickleBusinessHome() {
@@ -103,9 +104,16 @@ export default function PickleBusinessHome() {
           
           <div className="relative z-10 animate-float">
             <div className="bg-white rounded-2xl md:rounded-3xl shadow-xl p-4 sm:p-6 transform md:rotate-6">
-              <div className="bg-gradient-to-br from-green-100 to-green-50 border-2 border-green-200 rounded-xl w-full h-56 sm:h-64 md:h-80 flex items-center justify-center">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-48 h-48" />
-              </div>
+              <div className="bg-gradient-to-br from-green-100 to-green-50 border-2 border-green-200 rounded-xl w-full h-80 sm:h-64 md:h-84 relative overflow-hidden">
+  <Image
+    src="/pickle1.png" // Update with your actual image path
+    alt="Artisanal Pickle Jar"
+    fill
+    className="object-fill"
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    priority
+  />
+</div>
             </div>
           </div>
         </div>

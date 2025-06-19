@@ -32,7 +32,11 @@ export default function HomePage() {
           <TextReveal>"Bringing Tradition to Your Table, One Pickle at a Time."</TextReveal>
 
       </div>
-      <PickleCategories/>
+      <div id='pickles'>
+          <PickleCategories/>
+
+      </div>
+    
 
       < HomePage2/>
       <WhyChoose/>

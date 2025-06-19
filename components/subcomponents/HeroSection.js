@@ -34,15 +34,20 @@ export default function HeroSection() {
 
            <div className="animate-fade-in-up flex flex-col sm:flex-row items-center gap-4 lg:justify-start">
   <div className="flex flex-row justify-center gap-2 sm:gap-4">
+     <a href='/#pickles'>
     <button className="group relative flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 sm:px-8 sm:py-4 font-semibold text-white transition-all hover:bg-emerald-700 hover:shadow-lg hover:shadow-emerald-200">
-      <span>Shop Now</span>
+    <span>Shop Now</span>
       <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
         &rarr;
       </span>
+       
     </button>
+    </a>
+    <a href='/about'>
     <button className="flex items-center rounded-full bg-white px-6 py-3 sm:px-8 sm:py-4 font-semibold text-emerald-700 ring-2 ring-emerald-600 transition-all hover:bg-emerald-50 hover:shadow-md">
       Learn More
     </button>
+    </a>
   </div>
 </div>
           </div>

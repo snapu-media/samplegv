@@ -27,7 +27,7 @@ export default function FloatingNav() {
               <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors hover:bg-white/10 px-3 py-1 rounded-lg">
                 About
               </Link>
-              <Link href="/services" className="text-gray-700 hover:text-gray-900 transition-colors hover:bg-white/10 px-3 py-1 rounded-lg">
+              <Link href="/#pickles" className="text-gray-700 hover:text-gray-900 transition-colors hover:bg-white/10 px-3 py-1 rounded-lg">
                 Pickles
               </Link>
               <Link href="/contact" className="text-gray-700 hover:text-gray-900 transition-colors hover:bg-white/10 px-3 py-1 rounded-lg">
@@ -85,7 +85,7 @@ export default function FloatingNav() {
               About
             </Link>
             <Link
-              href="/services"
+              href="/#pickles"
               className="block px-3 py-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-white/20 transition-colors"
             >
               Pickles
