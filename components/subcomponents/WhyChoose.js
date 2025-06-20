@@ -2,6 +2,7 @@
 'use client';
 
 import {useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 
 export default function WhyChoose() {
@@ -117,11 +118,17 @@ export default function WhyChoose() {
   <div className="container mx-auto">
     <div className="flex flex-col lg:flex-row items-center">
       {/* Image Column - full width on mobile, half on desktop */}
-      <div className="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-8 xl:pr-10 opacity-0 translate-y-10 animate-fadeInUp" 
+       <div className="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-8 xl:pr-10 opacity-0 translate-y-10 animate-fadeInUp" 
            ref={el => textRefs.current[12] = el}>
         <div className="bg-white rounded-lg sm:rounded-xl shadow-lg p-3 sm:p-4 transform lg:-rotate-3">
-          <div className="bg-gradient-to-br from-green-100 to-green-50 border-2 border-green-200 rounded-lg sm:rounded-xl w-full h-64 sm:h-80 md:h-96 flex items-center justify-center">
-            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-48 h-48" />
+          <div className="relative rounded-lg sm:rounded-xl w-full h-64 sm:h-80 md:h-96 overflow-hidden">
+            <Image
+              src="/ourstory.jpg" // Update with your actual image path
+              alt="Green Valley Pickles Story"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg sm:rounded-xl"
+            />
           </div>
         </div>
       </div>

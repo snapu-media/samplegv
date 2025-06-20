@@ -49,7 +49,7 @@ export default function PickleCategories() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 mt-4">
           <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
             Our Pickle Collection
           </h1>

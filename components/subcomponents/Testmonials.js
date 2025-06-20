@@ -95,7 +95,7 @@ export default function Testimonials() {
             "{testimonial.comment}"
           </p>
           <div className="flex items-center">
-            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-8 h-8 sm:w-10 sm:h-10 mr-2 sm:mr-3"></div>
+          
             <div>
               <h4 className="font-bold text-green-900 text-sm sm:text-base">{testimonial.name}</h4>
               <p className="text-gray-600 text-xs sm:text-sm">{testimonial.location}</p>

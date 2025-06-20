@@ -4,12 +4,32 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function VegPicklesPage() {
+  const router = useRouter();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState('all');
   const [sortOption, setSortOption] = useState('popular');
+
+   // Function to generate slug from product name
+  const generateSlug = (name) => {
+    return name
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-')
+      .replace(/^-+/, '')
+      .replace(/-+$/, '');
+  };
+
+  // Function to handle product click
+  const handleProductClick = (product) => {
+    const slug = generateSlug(product.name);
+    router.push(`/pickles/${slug}`);
+  };
 
   // Fetch veg pickles from Firestore
   useEffect(() => {
@@ -192,6 +212,7 @@ export default function VegPicklesPage() {
                   variants={itemVariants}
                   whileHover={{ y: -10, transition: { duration: 0.3 } }}
                   className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl"
+                   onClick={() => handleProductClick(product)}
                 >
                   <div className="relative">
                     {product.isBestSeller && (
@@ -263,12 +284,18 @@ export default function VegPicklesPage() {
                         Add to Cart
                       </motion.button>
                       
-                      <button className="text-green-600 hover:text-green-800 font-medium flex items-center">
-                        Details
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
+                       <button 
+                    className="text-green-600 hover:text-green-800 font-medium flex items-center"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleProductClick(product);
+                    }}
+                  >
+                    Details
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                     </div>
                   </div>
                 </motion.div>

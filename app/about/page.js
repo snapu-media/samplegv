@@ -49,34 +49,29 @@ export default function AboutPage() {
       description: "We stand behind the exceptional taste and quality of every product" 
     }
   ];
+const coreValues = [
+  { 
+    title: "Authentic Recipes", 
+    description: "We preserve traditional recipes passed down through generations, ensuring every bite takes you back to authentic Indian flavors." 
+  },
+  { 
+    title: "Natural Ingredients", 
+    description: "Only the freshest, locally-sourced produce and natural ingredients go into our pickles. No artificial preservatives or colors." 
+  },
+  { 
+    title: "Handcrafted Quality", 
+    description: "Each batch is carefully prepared by hand in small quantities, maintaining the highest standards of taste and texture." 
+  },
+  { 
+    title: "Sustainable Practices", 
+    description: "From sourcing to packaging, we prioritize eco-friendly practices to minimize our environmental footprint." 
+  },
+  { 
+    title: "Community Focus", 
+    description: "We support local farmers and communities, building relationships that help us grow together." 
+  }
+];
 
-  const timeline = [
-    { 
-      year: "1995", 
-      title: "Family Recipe Beginnings", 
-      description: "Grandma Priya started making pickles in her home kitchen using recipes from her village in Punjab" 
-    },
-    { 
-      year: "2005", 
-      title: "First Farmers Market Stall", 
-      description: "We set up our first stall at the local farmers market, introducing our pickles to the community" 
-    },
-    { 
-      year: "2015", 
-      title: "Commercial Kitchen", 
-      description: "With growing demand, we established our first certified commercial production facility" 
-    },
-    { 
-      year: "2020", 
-      title: "National Distribution", 
-      description: "Our products became available in specialty stores across the country" 
-    },
-    { 
-      year: "2023", 
-      title: "International Recognition", 
-      description: "Won the Gourmet Gold Award for Best Artisanal Pickle Brand" 
-    }
-  ];
 
   const team = [
     { 
@@ -170,58 +165,59 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="py-16 md:py-24 bg-white relative">
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-green-50 to-white -translate-y-full"></div>
-        
-        <div className="container mx-auto px-4">
+     {/* Our Values */}
+<section className="py-16 md:py-24 bg-white relative">
+  <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-green-50 to-white -translate-y-full"></div>
+  
+  <div className="container mx-auto px-4">
+    <motion.div 
+      className="text-center mb-16"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-4">Our Core Values</h2>
+      <div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
+      <p className="text-xl text-green-800 max-w-3xl mx-auto">
+        These principles guide everything we do, from sourcing to serving our delicious pickles.
+      </p>
+    </motion.div>
+    
+    {/* Values List */}
+    <div className="max-w-4xl mx-auto">
+      {coreValues.map((value, index) => (
+        <motion.div 
+          key={index}
+          className="flex flex-col md:flex-row mb-16"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            className="md:w-1/3 mb-4 md:mb-0"
+            variants={item}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-green-900 mb-4">Our Humble Beginnings</h2>
-            <div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
-            <p className="text-xl text-green-800 max-w-3xl mx-auto">
-              What started as a family tradition has grown into a beloved brand, but our commitment to quality remains unchanged.
-            </p>
+            <div className="flex items-center">
+              <div className="bg-amber-500 rounded-full w-4 h-4"></div>
+              <div className="h-px bg-green-300 flex-grow mx-2"></div>
+              <span className="text-2xl font-bold text-amber-600">{index + 1}</span>
+            </div>
           </motion.div>
           
-          {/* Timeline */}
-          <div className="max-w-4xl mx-auto">
-            {timeline.map((event, index) => (
-              <motion.div 
-                key={index}
-                className="flex flex-col md:flex-row mb-16"
-                variants={container}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                <motion.div 
-                  className="md:w-1/3 mb-4 md:mb-0"
-                  variants={item}
-                >
-                  <div className="flex items-center">
-                    <div className="bg-amber-500 rounded-full w-4 h-4"></div>
-                    <div className="h-px bg-green-300 flex-grow mx-2"></div>
-                    <span className="text-2xl font-bold text-amber-600">{event.year}</span>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  className="md:w-2/3 bg-green-50 rounded-2xl p-6 md:ml-4 shadow-md border border-green-100"
-                  variants={item}
-                >
-                  <h3 className="text-xl font-bold text-green-900 mb-2">{event.title}</h3>
-                  <p className="text-green-800">{event.description}</p>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <motion.div 
+            className="md:w-2/3 bg-green-50 rounded-2xl p-6 md:ml-4 shadow-md border border-green-100"
+            variants={item}
+          >
+            <h3 className="text-xl font-bold text-green-900 mb-2">{value.title}</h3>
+            <p className="text-green-800">{value.description}</p>
+          </motion.div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Our Values */}
       <section className="py-16 md:py-24 relative bg-gradient-to-br from-green-100 to-amber-50">
